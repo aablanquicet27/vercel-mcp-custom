@@ -107,7 +107,7 @@ const handler = createMcpHandler(
       }
     );
 
-    // Tool 2: List projects (backup)
+    // Tool 2: List projects
     server.tool(
       "list_vercel_projects",
       "Lists all Vercel projects in the team",
@@ -186,7 +186,6 @@ const handler = createMcpHandler(
         ref: z.string().optional().describe("Git branch or tag to deploy (defaults to main)"),
       },
       async ({ projectName, ref }) => {
-        // First get the project to find the repo info
         const projResponse = await fetch(
           `https://api.vercel.com/v9/projects/${projectName}?teamId=${VERCEL_TEAM_ID}`,
           {
