@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main style= padding: '2rem', fontFamily: 'system-ui' >
+    <main style= padding: "2rem", fontFamily: "system-ui" >
       <h1>Vercel MCP Custom Server</h1>
       <p>This is an MCP server for managing Vercel projects.</p>
       <h2>Available Tools:</h2>
